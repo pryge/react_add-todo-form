@@ -108,6 +108,7 @@ export const App = () => {
         </button>
       </form>
 
+      {/* Pass todos as props to TodoList */}
       <TodoList todos={todos} />
     </div>
   );

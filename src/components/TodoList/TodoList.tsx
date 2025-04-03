@@ -1,15 +1,17 @@
 import React from 'react';
 import { TodoInfo } from '../TodoInfo/TodoInfo';
 
+interface User {
+  id: number;
+  name: string;
+  email: string;
+}
+
 interface Todo {
   id: number;
   title: string;
   completed: boolean;
-  user: {
-    id: number;
-    name: string;
-    email: string;
-  } | null;
+  user: User | null;
 }
 
 interface TodoListProps {
