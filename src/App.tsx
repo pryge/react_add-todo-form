@@ -40,8 +40,11 @@ export const App = () => {
       return;
     }
 
+    const newId =
+      todos.length > 0 ? Math.max(...todos.map(todo => todo.id)) + 1 : 1;
+
     const newTodo = {
-      id: todos.length + 1,
+      id: newId,
       title: title.trim(),
       completed: false,
       userId,
